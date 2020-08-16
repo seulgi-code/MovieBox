@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sist.com.bean.apple">
+<!--  movie  -->
+
+<!-- 회원  -->
+ 	<select id="loginIdCheck" parameterType="java.lang.String" resultType="java.lang.String">
+  	SELECT ID FROM MEMBERINFO WHERE ID=#{VALUE}
+  	</select>
+	<insert id="insertMember" parameterType="member">
+		INSERT INTO MEMBERINFO(ID,NAME,PASSWORD,BIRTH,TEL,EMAIL) VALUES(#{id},#{name},#{password},TO_DATE(#{birth},'YYYY-MM-DD'),#{tel},#{email})
+	</insert>
+	<select id="IdCheck" parameterType="java.lang.String" resultType="java.lang.String">
+  	SELECT PASSWORD FROM MEMBERINFO WHERE ID=#{VALUE}
+  	</select>
+  	<select id="moviInfo" parameterType="int" resultType="movie">
+  	SELECT MOVIE_NO,MOVIE_TITLE,TO_CHAR(OPENDATE,'YYYY.MM.DD')OPENDATE,RUNNINGTIME,TRAILER,STORY,DIRECTOR,ACTOR,POSTER_IMG,STILL_IMG,REVIEW_NO,GENRE	
+		FROM MOVIE
+		WHERE MOVIE_NO=#{no}
+  	</select>
+  	
+  	
+  	<select id="movieList" resultType="movie">
+  	  SELECT MOVIE_NO,MOVIE_TITLE,OPENDATE,RUNNINGTIME,TRAILER,STORY,DIRECTOR,ACTOR,POSTER_IMG,STILL_IMG,REVIEW_NO
+      FROM MOVIE
+  	</select>
+  	
+  	
+  	
+  	
+  	
+  	<!-- seat  -->
+  	
+  	<select id="ajaxMovieSchedule" parameterType="java.lang.Integer" resultType="schedule">
+		SELECT * FROM
+		(SELECT M.MOVIE_NO,MOVIE_TITLE,TO_CHAR(SCHEDULE_DATE,'YYYY.MM.DD')SCHEDULE_DATE,TO_CHAR(SCHEDULE_TIME,'HH24:MI')SCHEDULE_TIME,
+		RUNNINGTIME,SC.SCREEN_NO,SCREEN_NAME,SC.THEATER_NO,THEATER_NAME,THEATER_LOC
+		FROM SCREEN SC,SCHEDULE S,MOVIE M,THEATER T
+		WHERE S.MOVIE_NO=M.MOVIE_NO 
+		AND SC.SCREEN_NO=S.SCREEN_NO
+		AND SC.THEATER_NO=T.THEATER_NO)
+		WHERE MOVIE_NO=#{VALUE}
+	</select>
+	
+	
+	<select id="checkMovieSc" parameterType="HashMap" resultType="String">
+      SELECT SEAT FROM BOOKING WHERE MOVIE_NAME=#{movie_name} 
+      AND MOVIE_LOC=#{movie_loc} 
+      AND MOVIE_REGDATE=#{movie_regdate}
+      AND MOVIE_SCREEN=#{movie_screen} AND MOVIE_TIME=#{movie_time}
+   </select>
+   
+   <insert id="bookingMovieInsert" parameterType="booking">
+      INSERT INTO BOOKING(BOOKING_NO,BOOKING_DATE,BOOKING_AMOUNT,BOOKING_CHARGE,
+      MOVIE_NAME,MOVIE_LOC,MOVIE_REGDATE,MOVIE_SCREEN,MOVIE_TIME,ID,SEAT)
+       VALUES(BOOKING_SEQ.NEXTVAL,SYSDATE,#{booking_amount},#{booking_charge},
+       #{movie_name},#{movie_loc},#{movie_regdate},#{movie_screen},#{movie_time},#{id},#{seat})
+   </insert>
+   <delete id="BookingDelete" parameterType="HashMap">
+   	DELETE BOOKING WHERE BOOKING_NO=#{booking_no} AND ID=#{id}
+   </delete>
+   <!-- my page  -->
+	<select id="mySeatInfo" parameterType="String" resultType="booking">
+  		SELECT * FROM BOOKING WHERE ID=#{VALUE} ORDER BY BOOKING_NO DESC
+  	</select>
+  	
+  	<select id="myReviewList" parameterType="String" resultType="sist.com.dto.MyReviewBean">
+  		SELECT M.MOVIE_TITLE , R.CON , R.RATING ,R.REGDATE  FROM REVIEW R ,MOVIE M
+  		WHERE (R.MOVIE_NO = M.MOVIE_NO) AND R.ID=#{value} ORDER BY RENUM DESC
+  	</select>
+  	
+  	
+  	<select id="membeInfo" parameterType="String" resultType="member" >
+  		SELECT * FROM MEMBERINFO WHERE ID=#{VALUE}
+  	</select>
+
+   	
+   	<!-- Review -->
+   	
+	<insert id="insertReview"
+		parameterType="review">
+		INSERT INTO REVIEW
+		VALUES(REVIEW_SEQ.NEXTVAL,#{id},#{movie_no},'reviewPass',SYSDATE,#{con},#{rating})
+	</insert>
+
+	<select id="selectReview" resultType="review">
+		SELECT R.RENUM, R.ID, R.REGDATE, R.CON, R.RATING
+		FROM REVIEW R,MOVIE M
+		WHERE R.MOVIE_NO=M.MOVIE_NO AND R.MOVIE_NO = #{no}
+		ORDER BY R.REGDATE DESC
+	</select>
+	
+	<!-- Admin  -->
+	
+	<insert id="uploadMovie" parameterType="movie">
+		INSERT INTO MOVIE VALUES(
+		MOVIE_SEQ.NEXTVAL,#{movie_title},#{opendate},#{runningtime},
+		#{trailer},S
+		#{story},#{director},#{actor},
+		'avengersPoster.jpg',
+		'avengersPost.jpg',1,#{genre})
+	</insert>
+
+	<select id="selectMovie" resultType="movie">
+		SELECT
+		MOVIE_NO,MOVIE_TITLE,OPENDATE,RUNNINGTIME,DIRECTOR,ACTOR,STORY,TRAILER,GENRE
+		FROM MOVIE
+		WHERE MOVIE_NO=#{no}
+	</select>
+	
+	
+		<!--승원 -->
+	<select id="selectboard" resultType="board" parameterType="java.util.HashMap">
+		SELECT *
+		FROM(
+		SELECT ROWNUM RM, BNO,HIT,TITLE,WRITER,CONTENTS,REGDATE
+		FROM(
+		SELECT BNO,HIT,TITLE,WRITER,CONTENTS,TO_CHAR(REGDATE,'YYYY"년" MM"월"
+		DD"일"')REGDATE
+		FROM BOARD
+		ORDER BY BNO DESC
+		))
+		WHERE RM BETWEEN #{start} AND #{end}		
+	</select>
+	
+	<insert id="boardInsert">
+		INSERT INTO BOARD(BNO, TITLE, WRITER, CONTENTS)
+		VALUES(BOARD_SEQ.NEXTVAL, #{title}, #{writer},#{contents})
+	</insert>
+	
+	<update id="hit" parameterType="int">
+		UPDATE BOARD
+		SET HIT=HIT+1
+		WHERE BNO=#{bno}
+	</update>
+	
+	<select id="boardInfo" parameterType="int" resultType="board">
+		SELECT BNO,HIT,TITLE,WRITER,CONTENTS,REGDATE
+		FROM(
+		SELECT BNO, TITLE, WRITER, CONTENTS, TO_CHAR(REGDATE, 'YYYY"년" MM"월"
+		DD"일"')REGDATE, HIT
+		FROM BOARD
+		WHERE BNO=#{bno})
+	</select>
+	
+	<update id="update" parameterType="board">
+		UPDATE BOARD SET
+		TITLE=#{title}, CONTENTS=#{contents}
+		WHERE BNO=#{bno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM BOARD
+		WHERE
+		BNO=#{bno}
+	</delete>	
+ 
+	<select id="getTotalRow" resultType="int">
+		SELECT COUNT(*)
+		FROM BOARD
+	</select>
+	<select id="boardList" resultType="board">
+		SELECT BNO,TITLE,WRITER,HIT,REGDATE
+		FROM(
+		SELECT BNO,TITLE,WRITER,HIT,TO_CHAR(REGDATE, 'YYYY"년" MM"월" DD"일"')REGDATE
+		FROM BOARD)
+		ORDER BY BNO DESC
+	</select>
+	<select id="searchList" parameterType="java.lang.String" resultType="board">
+		SELECT BNO,HIT,TITLE,WRITER,CONTENTS,TO_CHAR(REGDATE,'YYYY"년" MM"월"
+		DD"일"')REGDATE
+		FROM BOARD
+		WHERE TITLE LIKE '%'||#{VALUE}||'%'
+	</select>
+	<select id="selectMovieImg" parameterType="java.lang.Integer" resultType="java.lang.String">
+      SELECT POSTER_IMG FROM MOVIE
+      WHERE MOVIE_NO=#{VALUE}   
+   </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

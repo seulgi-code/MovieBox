@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=file\:///D\:/Project/MovieBox_final/web/src/main/webapp/img/back.jpg|*|file\:/D\:/Project/MovieBox_final/web/src/main/webapp/img/back.jpg|*|file\:/D\:/Project/MovieBox_final/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1596523446301/index.html|*|file\:/D\:/Java/eclipse/plugins/org.springsource.ide.eclipse.commons.gettingstarted_3.9.9.201906180559-RELEASE/resources/welcome/index.html|*|http\://localhost\:8080/orm/index.jsp|*|

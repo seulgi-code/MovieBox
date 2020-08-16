@@ -1,0 +1,69 @@
+
+8월 05, 2020 07:07:37.86 NEW SESSION
+8월 05, 2020 07:07:37.86 [16308:2084:0805/070737.838:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:07:37.90 [16308:2084:0805/070737.904:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:15:11.26 [17704:10484:0805/071511.268:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:15:11.33 [17704:10484:0805/071511.332:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:22:58.78 [18272:9700:0805/072258.782:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:22:58.85 [18272:9700:0805/072258.853:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:24:07.54 [18272:9700:0805/072407.545:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 07:28:53.68 [976:8348:0805/072853.689:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:28:53.76 [976:8348:0805/072853.761:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 07:29:40.63 [976:8348:0805/072940.631:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (Connection error: net::ERR_CONNECTION_REFUSED)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 07:30:24.36 [976:8348:0805/073024.364:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 05, 2020 07:30:24.37     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 05, 2020 07:39:45.61 [976:8348:0805/073945.619:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 05, 2020 07:39:45.62     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 05, 2020 07:43:30.76 [976:8348:0805/074330.766:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 07:45:40.82 [976:8348:0805/074540.829:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+
+8월 05, 2020 19:56:12.95 NEW SESSION
+8월 05, 2020 19:56:12.95 [9700:14448:0805/195612.941:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 19:56:13.01 [9700:14448:0805/195613.016:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 19:56:28.02 [9700:14448:0805/195628.029:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 05, 2020 19:56:28.03     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 05, 2020 19:59:37.11 [9700:14448:0805/195937.113:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+
+8월 05, 2020 20:28:23.61 NEW SESSION
+8월 05, 2020 20:28:23.61 [6428:19164:0805/202823.611:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 20:28:23.72 [6428:19164:0805/202823.726:ERROR:bookmark_app_install_finalizer.cc(274)] Installed extension was disabled: 1
+8월 05, 2020 20:28:50.23 [6428:2356:0805/202850.234:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 05, 2020 20:28:50.42 [6428:2356:0805/202850.421:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+8월 05, 2020 20:35:22.82 [6428:19164:0805/203522.826:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 20:38:27.61 [6428:19164:0805/203827.616:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 20:39:25.06 [6428:19164:0805/203925.060:ERROR:CONSOLE(1060)] "Could not load content for http://localhost:8080/orm/scss/style.scss (HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE)", source: devtools://devtools/bundled/sdk/sdk.js (1060)
+8월 05, 2020 20:40:21.55 [6428:2356:0805/204021.558:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 05, 2020 20:51:46.32 [6428:2356:0805/205146.323:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 05, 2020 21:24:10.08 [6428:2356:0805/212410.080:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
+8월 05, 2020 22:47:45.12 [6428:19164:0805/224745.120:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 05, 2020 22:47:45.13     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 05, 2020 22:53:02.95 [6428:19164:0805/225302.957:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 05, 2020 22:53:02.96     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 05, 2020 22:55:19.66 [6428:2356:0805/225519.663:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 05, 2020 22:59:25.02 [6428:2356:0805/225925.026:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 22:59:49.15 [6428:2356:0805/225949.150:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:00:29.44 [6428:2356:0805/230029.445:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:01:55.99 [6428:2356:0805/230155.993:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:05:31.24 [6428:2356:0805/230531.248:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:13:09.57 [6428:2356:0805/231309.575:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:23:09.57 [6428:2356:0805/232309.578:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:33:09.58 [6428:2356:0805/233309.580:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:39:34.05 [6428:19480:0805/233934.058:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 05, 2020 23:40:49.06 [6428:19480:0805/234049.064:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 05, 2020 23:43:09.58 [6428:2356:0805/234309.583:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:43:56.07 [6428:19480:0805/234356.070:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 05, 2020 23:48:37.07 [6428:19848:0805/234837.075:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 05, 2020 23:53:09.58 [6428:2356:0805/235309.584:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 05, 2020 23:58:37.08 [6428:19480:0805/235837.081:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 06, 2020 24:03:09.58 [6428:2356:0806/000309.587:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 06, 2020 24:08:37.08 [6428:9592:0806/000837.087:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 06, 2020 24:13:09.59 [6428:2356:0806/001309.590:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 06, 2020 24:18:37.09 [6428:17976:0806/001837.094:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 06, 2020 24:43:39.71 [6428:2356:0806/004339.714:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 06, 2020 24:44:03.21 [6428:2356:0806/004403.217:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 06, 2020 01:27:08.22 [6428:19164:0806/012708.227:ERROR:CONSOLE(0)] "Error handling response: TypeError: Cannot read property 'always' of undefined
+8월 06, 2020 01:27:08.24     at chrome-extension://cnfngpgfjllafbghaimjcmailafcdhod/releaseDrag.js:90:49", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko (0)
+8월 06, 2020 04:19:09.15 [6428:2356:0806/041909.153:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 06, 2020 15:51:33.66 [6428:15732:0806/155133.665:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 06, 2020 15:51:35.81 [6428:2356:0806/155135.812:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 06, 2020 15:51:40.44 [6428:2356:0806/155140.444:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
